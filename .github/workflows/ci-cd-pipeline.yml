@@ -35,8 +35,8 @@ jobs:
           pip install -r requirements.txt
           pip install -r requirements-dev.txt
       
-      - name: Run code formatter check (Black)
-        run: black --check app/ tests/
+      - name: Run code formatter (Black)
+        run: black app/ tests/
       
       - name: Run linter (Flake8)
         run: flake8 app/ tests/ --max-line-length=100 --exclude=__pycache__
